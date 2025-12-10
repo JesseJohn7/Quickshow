@@ -6,7 +6,9 @@ import SeatLayout from './pages/SeatLayout'
 import Mybookings from './pages/my-bookings'
 import Favourite from './pages/Favourite'
 import { Route,Routes,useLocation } from 'react-router-dom'
-import Toaster from 'react-hot-toast'
+import {Toaster} from 'react-hot-toast'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 const App = () => {
   const isAdminRoute = useLocation().pathname.startsWith('/admin')
   return (

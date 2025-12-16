@@ -8,7 +8,7 @@ const FeaturedSection = () => {
 
   return (
     <div className='px-6 md:px-16 lg:px-24 xl:px-44 overflow-hidden'>
-      <BlurCircle/>
+      <BlurCircle top='0' right='-80px'/>
       <div className='relative flex items-center justify-between pt-20 pb-10'>
         <p className='text-gray-300 font-medium text-lg'>Now Showing</p>
         

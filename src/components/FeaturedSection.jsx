@@ -15,7 +15,8 @@ const FeaturedSection = () => {
 
         <button
           onClick={() => navigate('/movies')}
-          className="group flex items-center gap-2 text-sm text-gray-300 hover:text-white transition"
+          className="group flex items-center gap-2 text-sm text-gray-300 hover:text-white transition
+          cursor-pointer"
         >
           View All
           <ArrowRight className="group-hover:translate-x-0.5 transition w-4 h-4" />

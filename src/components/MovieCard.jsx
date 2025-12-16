@@ -1,9 +1,9 @@
 import { StarIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { image_base_url } from "../assets/assets"; // Make sure this exists
-
+import timeFormat from "../lib/timeformat";
 // fallback helper if not imported elsewhere
-const timeFormat = (mins) => `${Math.floor(mins / 60)}h ${mins % 60}m`;
+/* const timeFormat = (mins) => `${Math.floor(mins / 60)}h ${mins % 60}m`; */
 
 const MovieCard = ({ movie }) => {
   const navigate = useNavigate();

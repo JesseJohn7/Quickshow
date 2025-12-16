@@ -1,10 +1,12 @@
 import { StarIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { image_base_url } from "../assets/assets"; // Make sure this exists
+
+// fallback helper if not imported elsewhere
+const timeFormat = (mins) => `${Math.floor(mins / 60)}h ${mins % 60}m`;
 
 const MovieCard = ({ movie }) => {
   const navigate = useNavigate();
-
-  
 
   return (
     <div className="flex flex-col justify-between p-3 bg-gray-800 rounded-2xl hover:-translate-y-1 transition duration-300 w-66">
@@ -22,11 +24,8 @@ const MovieCard = ({ movie }) => {
 
       <p className="text-sm text-gray-400 mt-2">
         {new Date(movie.release_date).getFullYear()} •{" "}
-        {movie.genres
-          .slice(0, 2)
-          .map((genre) => genre.name)
-          .join(" | ")}{" "}
-        • {timeFormat(movie.runtime)}
+        {movie.genres.slice(0, 2).map((genre) => genre.name).join(" | ")} •{" "}
+        {timeFormat(movie.runtime)}
       </p>
 
       <div className="flex items-center justify-between mt-4 pb-3">

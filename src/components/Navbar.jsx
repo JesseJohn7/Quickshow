@@ -27,7 +27,7 @@ const Navbar = () => {
         <Link  onClick={()=>{scrollTo(0,0); setIsOpen(false) }} to='/'>Release</Link>
         <Link  onClick={()=>{scrollTo(0,0); setIsOpen(false) }} to='/favourites'>Favourites</Link>
       </div>
- 
+
         <div className='flex items-center gap-8'>
         <SearchIcon className='max-md:hidden w-6 h-6 cursor-pointer'/>
         {
